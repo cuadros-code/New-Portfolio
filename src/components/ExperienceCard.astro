@@ -1,0 +1,71 @@
+---
+interface Props {
+  date  : string;
+  title : string;
+  tools : string[];
+}
+
+const { date, title, tools } = Astro.props
+---
+
+<div class="card">
+  <div class="card__date">
+    <p>{date}</p>
+  </div>
+  <div class="card__content">
+    <p class="card__content-title">{title}</p>
+    <p class="card__content-description">
+      <slot />
+    </p>
+    <ol class="card__content-tools">
+      { tools.map((item) => <li>{item}</li>) }
+    </ol>
+  </div>
+</div>
+
+<style>
+
+  .card{
+    padding: 16px;
+    color: var(--white);
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+  }
+
+  .card__date{
+    font-size: 14px;
+  }
+
+  .card__content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card__content-title{
+    font-size: 16px;
+  }
+
+  .card__content-description{
+    font-size: 16px;
+    opacity: 0.7;
+  }
+
+  .card__content-tools{
+    display: flex;
+    gap: 8px;
+  }
+
+  .card__content-tools li {
+    font-size: 12px;
+    font-family: var(--font-regular);
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border-radius: 16px;
+    padding: 5px 8px;
+  }
+
+</style>

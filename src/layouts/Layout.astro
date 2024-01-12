@@ -50,11 +50,25 @@ const { title } = Astro.props;
 	}
 	:root {
 		--primary: #0fc3d7;
+		--primary-light: #0fc3d738;
 		--white: #ffffff;
+		--black: #000000;
 		--shadow-white: #ffffff52;
+		--font-medium: 'Geist-Medium', system-ui, sans-serif;
+		--font-regular: 'Geist-Regular', system-ui, sans-serif;
+		--font-bold: 'Geist-Bold', system-ui, sans-serif;
 	}
 	html {
-		font-family: 'Geist-Medium', system-ui, sans-serif;
+		font-family: var(--font-medium);
 		background: #13151a;
+	}
+
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-decoration: none;
+		border: none;
+		outline: none;
 	}
 </style>

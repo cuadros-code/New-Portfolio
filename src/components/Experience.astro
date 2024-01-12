@@ -1,0 +1,51 @@
+---
+import ExperienceCard from "./ExperienceCard.astro";
+
+
+---
+
+<section class="experience">
+  <h3 class="experience__title">Experience</h3>
+  <div class="experience__list">
+    <ExperienceCard 
+      date="OCT 2022 — PRESENT"
+      title="Senior Software Developer · PersonalSoft"
+      tools={['Angular', 'Typescript']}
+    >
+      Development and maintenance of web and mobile applications using React and React Native
+    </ExperienceCard>
+    <ExperienceCard 
+      date="OCT 2021 — OCT 2022"
+      title="Senior React Developer · Indra"
+      tools={['React', 'Typescript','Next', 'Redux']}
+    >
+      Development and maintenance of web and mobile applications using React and React Native
+    </ExperienceCard>
+    <ExperienceCard 
+      date="MAY — OCT 2021"
+      title="Frontend Developer · El Lab"
+      tools={['React', 'Typescript', 'Angular']}
+    >
+      Development and maintenance of web and mobile applications using React and React Native
+    </ExperienceCard>
+  </div>
+</section>
+
+<style>
+
+  .experience__title{
+    color: var(--white);
+    font-family: var(--font-bold);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .experience__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+</style>

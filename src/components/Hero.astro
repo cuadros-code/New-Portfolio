@@ -1,0 +1,113 @@
+---
+const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18').getFullYear();
+---
+
+<section class="hero">
+  <h3 class="hero__name">Hello, I'm <span>Kevin</span></h3>
+  <h1 class="hero__title">Frontend<br> <span>&#60</span> Developer <span>&#62</span></h1>
+  <p class="hero__experience">Experienced frontend developer with over <span>{startExperience}</span> years of expertise</p>
+  <p class="hero__description">Committed to crafting engaging and functional interfaces that enhance user experiences</p>
+  <div class="hero__links">
+    <a 
+      href="https://www.linkedin.com/in/kevin-david-cuadros" 
+      rel="noopener noreferrer"
+      title="linkedin"
+      target="_blank"
+    >
+      <img src="/icons/linkedin.svg" alt="linkedin">
+    </a>
+    <a 
+      href="https://github.com/cuadros-code" 
+      rel="noopener noreferrer"
+      title="github"
+      target="_blank"
+    >
+      <img src="/icons/github.svg" alt="github">
+    </a>
+  </div>
+</section>
+
+<style>
+  .hero{
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__name{
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .hero__name span{
+    color: var(--primary);
+  }
+
+  .hero__title{
+    color: var(--white);
+    font-size: 7.25rem;
+    text-align: center;
+    line-height: 6.3rem;
+    margin: 0 0 1.2rem 0;
+    font-family: var(--font-bold);
+  }
+
+  .hero__title span:first-of-type{
+    color: var(--primary);
+    position: relative;
+    right: -20px;
+  }
+  .hero__title span:last-of-type{
+    color: var(--primary);
+    position: relative;
+    left: -20px;
+  }
+
+  p{
+    color: var(--white);
+    text-align: center;
+    font-size: 1.155rem;
+    line-height: 1.75rem;
+    margin: 0;
+  }
+
+  .hero__experience{
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+
+  .hero__experience span{
+    color: var(--primary);
+  }
+
+  .hero__description{
+    max-width: 500px;
+  }
+
+  .hero__links {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .hero__links a{
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+  }
+
+  .hero__links a:hover {
+    background-color: var(--shadow-white);
+  }
+
+  .hero__links a img{
+    width: 40px;
+  }
+
+</style>

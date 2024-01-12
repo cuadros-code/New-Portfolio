@@ -1,73 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18').getFullYear();
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Kevin D. Cuadros">
-  <main class="hero">
-    <h3 class="hero__name">Hello, I'm <span>Kevin</span></h3>
-    <h1 class="hero__title">Frontend<br> <span>&#60</span> Developer <span>&#62</span></h1>
-    <p class="hero__experience">Experienced frontend developer with over {startExperience} years of expertise</p>
-    <p class="hero__description">Committed to crafting engaging and functional interfaces that enhance user experiences</p>
-  </main>
+  <Hero />
+  <Experience />
 </Layout>
 
 <style>
-  .hero{
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero__name{
-    color: var(--white);
-    text-align: center;
-    margin: 0;
-    font-size: 24px;
-  }
-
-  .hero__name span{
-    color: var(--primary);
-  }
-
-  .hero__title{
-    color: var(--white);
-    font-size: 7.25rem;
-    text-align: center;
-    line-height: 6.3rem;
-    margin: 0 0 1.2rem 0;
-    font-family: 'Geist-Bold';
-  }
-
-  .hero__title span:first-of-type{
-    color: var(--primary);
-    position: relative;
-    right: -20px;
-  }
-  .hero__title span:last-of-type{
-    color: var(--primary);
-    position: relative;
-    left: -20px;
-  }
-
-  p{
-    color: var(--white);
-    text-align: center;
-    font-size: 1.155rem;
-    line-height: 1.75rem;
-    margin: 0;
-  }
-
-  .hero__experience{
-    margin-bottom: 10px;
-    opacity: 0.6;
-  }
-
-  .hero__description{
-    max-width: 500px;
-  }
-
 </style>
