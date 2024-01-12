@@ -1,10 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const startExperience = new Date('May 18, 21 00:20:18');
+const currentDate = new Date();
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Kevin D. Cuadros">
+  <main>
+    <h3>Hello, I'm Kevin</h3>
+    <h1>Frontend<br> <span>&#60</span> Developer <span>&#62</span></h1>
+    <p>Experienced frontend developer with over {currentDate.getFullYear() - startExperience.getFullYear()} years of expertise</p>
+    <p>Committed to crafting engaging and functional interfaces that enhance user experiences</p>
+  </main>
 </Layout>
 
 <style>
+  main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    color: white;
+    font-size: 7.25rem;
+    text-align: center;
+    line-height: 6.3rem;
+    margin: 0 0 1.2rem 0;
+    font-family: 'Geist-Bold';
+  }
+
+  span:first-of-type{
+    color: #ff512f;
+    position: relative;
+    right: -20px;
+  }
+  span:last-of-type{
+    color: #ff512f;;
+    position: relative;
+    left: -20px;
+  }
+
+  h3{
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+
+  p{
+    max-width: 600px;
+    color: white;
+    text-align: center;
+    font-size: 1.155rem;
+    line-height: 1.75rem;
+    margin: 0;
+  }
 
 </style>
