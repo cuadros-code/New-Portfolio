@@ -1,30 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const startExperience = new Date('May 18, 21 00:20:18');
-const currentDate = new Date();
-
+const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18').getFullYear();
 ---
 
 <Layout title="Kevin D. Cuadros">
-  <main>
-    <h3>Hello, I'm Kevin</h3>
-    <h1>Frontend<br> <span>&#60</span> Developer <span>&#62</span></h1>
-    <p>Experienced frontend developer with over {currentDate.getFullYear() - startExperience.getFullYear()} years of expertise</p>
-    <p>Committed to crafting engaging and functional interfaces that enhance user experiences</p>
+  <main class="hero">
+    <h3 class="hero__name">Hello, I'm <span>Kevin</span></h3>
+    <h1 class="hero__title">Frontend<br> <span>&#60</span> Developer <span>&#62</span></h1>
+    <p class="hero__experience">Experienced frontend developer with over {startExperience} years of expertise</p>
+    <p class="hero__description">Committed to crafting engaging and functional interfaces that enhance user experiences</p>
   </main>
 </Layout>
 
 <style>
-  main{
-    height: 100vh;
+  .hero{
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  h1{
-    color: white;
+
+  .hero__name{
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .hero__name span{
+    color: var(--primary);
+  }
+
+  .hero__title{
+    color: var(--white);
     font-size: 7.25rem;
     text-align: center;
     line-height: 6.3rem;
@@ -32,30 +42,32 @@ const currentDate = new Date();
     font-family: 'Geist-Bold';
   }
 
-  span:first-of-type{
-    color: #ff512f;
+  .hero__title span:first-of-type{
+    color: var(--primary);
     position: relative;
     right: -20px;
   }
-  span:last-of-type{
-    color: #ff512f;;
+  .hero__title span:last-of-type{
+    color: var(--primary);
     position: relative;
     left: -20px;
   }
 
-  h3{
-    color: white;
-    text-align: center;
-    margin: 0;
-  }
-
   p{
-    max-width: 600px;
-    color: white;
+    color: var(--white);
     text-align: center;
     font-size: 1.155rem;
     line-height: 1.75rem;
     margin: 0;
+  }
+
+  .hero__experience{
+    margin-bottom: 10px;
+    opacity: 0.6;
+  }
+
+  .hero__description{
+    max-width: 500px;
   }
 
 </style>
