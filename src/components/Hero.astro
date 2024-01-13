@@ -56,6 +56,20 @@ const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18
     font-family: var(--font-bold);
   }
 
+  @media (max-width: 800px) {
+    .hero__title{
+      font-size: 5.25rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .hero__title{
+      font-size: 3.25rem;
+      line-height: 3.3rem;
+    }
+
+  }
+
   .hero__title span:first-of-type{
     color: var(--primary);
     position: relative;

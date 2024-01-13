@@ -23,6 +23,7 @@ import ProjectCard from "./ProjectCard.astro";
 <style>
   .projects{
     margin-bottom: 84px;
+    margin-top: 62px;
   }
 
   .projects__title{
@@ -40,4 +41,12 @@ import ProjectCard from "./ProjectCard.astro";
     margin: 0 auto;
     grid-template-columns: 1fr;
   }
+
+  @media (max-width: 500px) {
+    .projects__title{
+      font-size: 3rem;
+      margin-bottom: 24px;
+    }
+  }
+
 </style>

@@ -33,6 +33,19 @@ const { date, title, tools } = Astro.props
     grid-template-columns: 1.5fr 4fr;
   }
 
+  @media (max-width: 500px) {
+    .card{
+      display: flex;
+      flex-direction: column;
+      margin: 0px 8px;
+    }
+   
+    .card__date{
+      margin-bottom: 14px;
+    } 
+  }
+
+
   .card__date{
     font-size: 14px;
   }

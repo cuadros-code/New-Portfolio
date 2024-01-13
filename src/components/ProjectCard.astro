@@ -35,6 +35,12 @@ const { title, tools, image, href } = Astro.props
     cursor: pointer;
   }
 
+  @media (max-width: 500px) {
+    .card{
+      flex-direction: column-reverse;
+    }
+  }
+
   .card:hover{
     background: #172033;
   }
