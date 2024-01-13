@@ -4,29 +4,31 @@ import ExperienceCard from "./ExperienceCard.astro";
 
 ---
 
-<section class="experience">
+<section id="experience" class="experience">
   <h3 class="experience__title">Experience</h3>
   <div class="experience__list">
     <ExperienceCard 
       date="OCT 2022 — PRESENT"
       title="Senior Software Developer · PersonalSoft"
-      tools={['Angular', 'Typescript']}
+      tools={['Angular', 'Typescript', 'Aws']}
     >
-      Development and maintenance of web and mobile applications using React and React Native
+      Integral development of products and services for Bancolombia in the area of mobility 
+      <a href="https://movilidadtu360.grupobancolombia.com/" rel="noopener noreferrer" target="_blank">( Tu360Movilidad )</a>, 
+      from conception to implementation and continuous optimization.
     </ExperienceCard>
     <ExperienceCard 
       date="OCT 2021 — OCT 2022"
       title="Senior React Developer · Indra"
-      tools={['React', 'Typescript','Next', 'Redux']}
+      tools={['React', 'React Native','Typescript','Next', 'Redux']}
     >
-      Development and maintenance of web and mobile applications using React and React Native
+      Development of web and mobile applications for the mobility sector of the city of Bogota and the administration of health services for the company Keralty.
     </ExperienceCard>
     <ExperienceCard 
       date="MAY — OCT 2021"
       title="Frontend Developer · El Lab"
-      tools={['React', 'Typescript', 'Angular']}
+      tools={['React',  'Typescript', 'Angular']}
     >
-      Development and maintenance of web and mobile applications using React and React Native
+      Development and maintenance of web applications focused on route tracking and optimization in delivery services. 
     </ExperienceCard>
   </div>
 </section>
@@ -46,6 +48,11 @@ import ExperienceCard from "./ExperienceCard.astro";
     flex-direction: column;
     align-items: center;
     gap: 14px;
+  }
+
+  a{
+    color: var(--primary);
+    text-decoration: underline;
   }
 
 </style>
