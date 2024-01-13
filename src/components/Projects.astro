@@ -1,0 +1,43 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+
+---
+
+<section id="projects" class="projects">
+  <h3 class="projects__title">Projects</h3>
+  <div class="projects__content">
+    <ProjectCard
+      href="https://tu360.grupobancolombia.com/movilidad/cotidianidad/home"
+      title="Administra tu Vehículo"
+      image="/images/movilidad.png"
+      tools={['Angular', 'Redux', 'Aws']}
+    >
+    Proposal of the Bancolombia group to provide solutions for cars 
+    and motorcycles such as tires, batteries, insurance, all risks, 
+    and make the use of the vehicle easier.
+    </ProjectCard>
+  </div>
+</section>
+
+<style>
+  .projects{
+    margin-bottom: 84px;
+  }
+
+  .projects__title{
+    color: var(--white);
+    font-family: var(--font-bold);
+    font-size: 4rem;
+    text-align: center;
+    margin: 32px 0px;
+  }
+
+  .projects__content{
+    display: grid;
+    gap: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+</style>
