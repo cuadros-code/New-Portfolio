@@ -12,7 +12,7 @@ const { title, tools, image, href } = Astro.props
 <a class="card" href={href} rel="noopener noreferrer" title={title} target="_blank">
   <img class="card__image" src={image} alt="project">
   <div class="card__content">
-    <p class="card__content-title">{title}</p>
+    <p class="card__content-title">{title} <img src="/icons/link.svg" alt="external link" /></p>
     <p class="card__content-description">
       <slot />
     </p>
@@ -43,6 +43,11 @@ const { title, tools, image, href } = Astro.props
 
   .card:hover{
     background: #172033;
+    transition: all .2s;
+  }
+
+  .card:hover .card__content-title img {
+    transform: scale(1.2);
   }
 
   .card__image{
@@ -60,6 +65,9 @@ const { title, tools, image, href } = Astro.props
 
   .card__content-title{
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .card__content-description{
