@@ -1,8 +1,40 @@
+---
+import AngularIcon from "../Icons/Angular.astro";
+import ReactIcon from "../Icons/ReactIcon.astro";
+import TsIcon from "../Icons/TsIcon.astro";
+import JestIcon from "../Icons/JestIcon.astro";
+import PlaywrightIcon from "../Icons/PlaywrightIcon.astro";
+---
+
 <section id="skills" class="skills">
   <h3 class="skills__title">Skills</h3>
 
   <div class="skills_content">
-
+    <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer">
+      <div class="skills_card">
+        <AngularIcon />
+      </div>
+    </a>
+    <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
+      <div class="skills_card">
+        <ReactIcon />
+      </div>
+    </a>
+    <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
+      <div class="skills_card">
+        <TsIcon />
+      </div>
+    </a>
+    <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">
+      <div class="skills_card">
+        <JestIcon />
+      </div>
+    </a>
+    <a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer">
+      <div class="skills_card">
+        <PlaywrightIcon />
+      </div>
+    </a>
   </div>
 
 </section>
@@ -21,8 +53,31 @@
     margin: 32px 0px;
   }
 
+  .skills_card{
+    padding: 1.5rem;
+    border-radius:  12px;
+    background-color: #ffffff0f;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .skills_card:hover{
+    transform: scale(1.05);
+    background-color: #ffffff16;
+  }
+
   .skills_content{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0px 25px;
+  }
+
+  @media ( width <= 980px ) {
+    .skills_content{
+      flex-wrap: wrap;
+    }
   }
 
 </style>
