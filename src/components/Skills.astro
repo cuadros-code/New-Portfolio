@@ -4,6 +4,8 @@ import ReactIcon from "../Icons/ReactIcon.astro";
 import TsIcon from "../Icons/TsIcon.astro";
 import JestIcon from "../Icons/JestIcon.astro";
 import PlaywrightIcon from "../Icons/PlaywrightIcon.astro";
+import NextIcon from "../Icons/NextIcon.astro";
+
 ---
 
 <section id="skills" class="skills">
@@ -13,26 +15,37 @@ import PlaywrightIcon from "../Icons/PlaywrightIcon.astro";
     <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer">
       <div class="skills_card">
         <AngularIcon />
+        <h3>Angular</h3>
       </div>
     </a>
     <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
       <div class="skills_card">
         <ReactIcon />
+        <h3>React</h3>
+      </div>
+    </a>
+    <a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer">
+      <div class="skills_card">
+        <NextIcon />
+        <h3>Next.js</h3>
       </div>
     </a>
     <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
       <div class="skills_card">
         <TsIcon />
+        <h3>Typescript</h3>
       </div>
     </a>
     <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">
       <div class="skills_card">
         <JestIcon />
+        <h3>Jest</h3>
       </div>
     </a>
     <a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer">
       <div class="skills_card">
         <PlaywrightIcon />
+        <h3>Playwright</h3>
       </div>
     </a>
   </div>
@@ -54,11 +67,18 @@ import PlaywrightIcon from "../Icons/PlaywrightIcon.astro";
   }
 
   .skills_card{
+    width: 120px;
+    height: 140px;
     padding: 1.5rem;
     border-radius:  12px;
     background-color: #ffffff0f;
     cursor: pointer;
     transition: .3s;
+  }
+
+  .skills_card h3 {
+    color: #fff;
+    text-align: center;
   }
 
   .skills_card:hover{
@@ -74,9 +94,11 @@ import PlaywrightIcon from "../Icons/PlaywrightIcon.astro";
     padding: 0px 25px;
   }
 
-  @media ( width <= 980px ) {
+  @media ( width <= 1180px ) {
     .skills_content{
       flex-wrap: wrap;
+      padding: 0 10px;
+      gap: 1rem;
     }
   }
 
