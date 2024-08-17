@@ -16,6 +16,15 @@ const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18
     >
       <img src="/icons/linkedin.svg" alt="linkedin">
     </a>
+    <a
+      class="cv"
+      href="/cv.pdf" 
+      rel="noopener noreferrer"
+      title="resume"
+      target="_blank"
+    >
+      <img src="/icons/cv.svg" alt="resume">
+    </a>
     <a 
       href="https://github.com/cuadros-code" 
       rel="noopener noreferrer"
@@ -23,15 +32,6 @@ const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18
       target="_blank"
     >
       <img src="/icons/github.svg" alt="github">
-    </a>
-
-    <a 
-      href="/cv.pdf" 
-      rel="noopener noreferrer"
-      title="resume"
-      target="_blank"
-    >
-      <img src="/icons/cv.svg" alt="resume">
     </a>
   </div>
 </section>
@@ -139,7 +139,12 @@ const startExperience = new Date().getFullYear() - new Date('May 18, 21 00:20:18
   }
 
   .hero__links a img{
+    width: 40px;
+  }
+
+  .hero__links .cv img{
     width: 50px;
+    
   }
 
 </style>
